@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 // Create server instance
@@ -8,4 +11,5 @@ const server = new McpServer({
     resources: {},
     tools: {},
   },
+  port: process.env.MCP_SERVER_PORT,
 });
